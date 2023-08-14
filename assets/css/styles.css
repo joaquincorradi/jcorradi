@@ -1,3 +1,5 @@
+/* Initial config */
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -14,4 +16,68 @@ body {
   font-family: "Poppins", sans-serif;
   color: #feffff;
   background-color: #000000;
+}
+
+a {
+  color: #feffff;
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* Desktop version */
+
+nav,
+.navbar-links,
+.toggle-btns {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.navbar-links,
+.toggle-btns {
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.toggle-btns {
+  font-size: 1.5rem;
+}
+
+/* Hide hamburger menu on desktop and config*/
+
+#mobile-navbar {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.hamburger-menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #121212;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
 }

@@ -46,7 +46,7 @@
         </section>
 
         <section>
-          <ul>
+          <ul class="toggle-btns">
             <li>
               <a href="#">
                 <i class="ri-sun-line rotate-icon"></i>
@@ -61,6 +61,51 @@
           </ul>
         </section>
       </nav>
+
+      <nav id="mobile-navbar">
+        <section class="logo">Joaquín Corradi</section>
+
+        <section class="hamburger-menu">
+          <article class="hamburger-icon" onclick="toggleMenu()">
+            <i class="ri-menu-line"></i>
+          </article>
+
+          <article class="hamburger-menu-links">
+            <ul>
+              <li>
+                <a href="#sobre" onclick="toggleMenu()">Sobre mí</a>
+              </li>
+
+              <li>
+                <a href="#tech-stack" onclick="toggleMenu()">Tech stack</a>
+              </li>
+
+              <li>
+                <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+              </li>
+
+              <li>
+                <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+              </li>
+            </ul>
+
+            <ul class="toggle-btns">
+              <li>
+                <a href="#">
+                  <i class="ri-sun-line rotate-icon"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="index-US.html">
+                  <i class="ri-global-line"></i>
+                </a>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </nav>
     </header>
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
