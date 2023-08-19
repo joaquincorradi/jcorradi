@@ -23,7 +23,7 @@
   <body>
     <header>
       <nav id="desktop-navbar">
-        <section class="logo">Joaquín Corradi</section>
+        <section class="logo">JC</section>
 
         <section>
           <ul class="navbar-links">
@@ -63,7 +63,7 @@
       </nav>
 
       <nav id="mobile-navbar">
-        <section class="logo">Joaquín Corradi</section>
+        <section class="logo">JC</section>
 
         <section class="hamburger-menu">
           <article class="hamburger-icon" onclick="toggleMenu()">
@@ -109,10 +109,45 @@
       </nav>
     </header>
 
-    <section id="profile">
+    <section class="section" id="profile">
       <article class="profile-pic-container">
-        <img src="./assets/img/Profile_circle.webp" alt="" />
+        <img src="./assets/img/Profile_circle.webp" alt="my profile pic" />
       </article>
+
+      <article class="profile-text-container">
+        <p class="section-p1">Hola, soy</p>
+        <h1 class="section-tittle">Joaquín Corradi</h1>
+        <p class="section-p2">Estudiante de ingeniería en computación</p>
+
+        <article class="btn-container">
+          <button class="btn" onclick="window.open('./assets/pdf/CV.pdf')">
+            Descargar CV<span class="arrow">~></span>
+          </button>
+
+          <button class="btn" onclick="location.href='./#contacto'">
+            Contacto<span class="arrow">~></span>
+          </button>
+        </article>
+
+        <article class="profile-social-icons-container">
+          <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
+            <i class="ri-linkedin-fill"></i>
+          </a>
+
+          <a href="https://github.com/joaquincorradi" target="_blank">
+            <i class="ri-github-fill"></i>
+          </a>
+
+          <a href="https://instagram.com/joaquincorradi" target="_blank">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </article>
+      </article>
+    </section>
+
+    <section class="section" id="about">
+      <p class="section-p1">Conoce más</p>
+      <h1 class="section-tittle">Sobre mí</h1>
     </section>
     <script src="./assets/js/scripts.js"></script>
   </body>
