@@ -55,6 +55,10 @@ nav {
   font-size: 1.5rem;
 }
 
+.navbar-links {
+  font-weight: 500;
+}
+
 /* Hide hamburger menu on desktop and config*/
 
 #mobile-navbar {
@@ -76,8 +80,20 @@ nav {
   top: 100%;
   right: 0;
   background-color: #121212;
-  width: 100%;
+  width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+}
+
+.hamburger-menu-links a {
+  display: block;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: all 0.3 ease-in-out;
+}
+
+.hamburger-menu-links.open {
+  max-height: 100vh;
 }
