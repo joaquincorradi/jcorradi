@@ -239,7 +239,6 @@ nav {
 
 .down-arrow {
   display: block;
-  transform: rotate(90deg);
   font-family: JetBrains Mono;
   font-size: 1.7rem;
   color: #d89d6a;
