@@ -153,7 +153,6 @@ nav {
 
 .section-p1 {
   text-align: center;
-
   margin-bottom: 0.5rem;
 }
 
@@ -230,6 +229,32 @@ nav {
 .btn:hover {
   background-color: #121212;
   color: #feffff;
+}
+
+.down-arrow-container {
+  position: absolute;
+  top: 85vh;
+  cursor: pointer;
+}
+
+.down-arrow {
+  display: block;
+  transform: rotate(90deg);
+  font-family: JetBrains Mono;
+  font-size: 1.7rem;
+  color: #d89d6a;
+  animation: moveUpDown 1s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(10px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(90deg);
+  }
 }
 
 /* About section config */
