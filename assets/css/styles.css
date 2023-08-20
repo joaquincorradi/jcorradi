@@ -292,12 +292,12 @@ nav {
 .section-container {
   display: flex;
   gap: 4rem;
-  height: 80%;
+  height: 70%;
 }
 
 .profile-pic-container {
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
   margin: auto 0;
 }
 
