@@ -6,3 +6,8 @@ function toggleMenu() {
   icon.classList.toggle("open");
   closeIcon.classList.toggle("open");
 }
+
+function lightMode() {
+  var body = document.body;
+  body.classList.toggle("light-mode");
+}

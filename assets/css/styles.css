@@ -16,6 +16,12 @@ body {
   font-family: "Poppins", sans-serif;
   color: #feffff;
   background-color: #000000;
+  transition: all 0.5s ease;
+}
+
+.light-mode {
+  color: #000000;
+  background-color: #feffff;
 }
 
 a {
@@ -62,6 +68,15 @@ nav {
 
 .navbar-links a:hover {
   color: #d89d6a;
+}
+
+.rotate-icon-desk {
+  display: inline-block;
+  transition: transform 0.55s ease;
+}
+
+.rotate-icon-desk:hover {
+  transform: rotate(-90deg);
 }
 
 /* Hide hamburger menu on desktop and config*/
@@ -186,7 +201,7 @@ nav {
   color: #d89d6a;
   overflow: hidden;
   cursor: pointer;
-  background-color: #000000;
+  background: none;
 }
 
 @font-face {
