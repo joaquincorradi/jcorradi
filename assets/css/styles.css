@@ -301,6 +301,22 @@ nav {
   margin: auto 0;
 }
 
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.about-pic {
+  animation: float 6s ease-in-out infinite;
+}
+
 .icon {
   font-size: 1.6rem;
 }
