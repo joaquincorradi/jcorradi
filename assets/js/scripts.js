@@ -15,8 +15,22 @@ function lightMode() {
   if (body.classList.contains("light-mode")) {
     icon.classList.remove("ri-sun-line");
     icon.classList.add("ri-moon-fill");
+    localStorage.setItem("theme", "light");
   } else {
     icon.classList.remove("ri-moon-fill");
     icon.classList.add("ri-sun-line");
+    localStorage.setItem("theme", "dark");
   }
 }
+
+function loadTheme() {
+  var theme = localStorage.getItem("theme");
+  if (theme === "light") {
+    document.body.classList.add("light-mode");
+    document.getElementById("theme-icon-desk").classList.add("ri-moon-fill");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadTheme();
+});
