@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joaquin Corradi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <!-- generics -->
+    <link rel="icon" href="./assets/favicon/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="./assets/favicon/favicon-57.png" sizes="57x57" />
+    <link rel="icon" href="./assets/favicon/favicon-76.png" sizes="76x76" />
+    <link rel="icon" href="./assets/favicon/favicon-96.png" sizes="96x96" />
+    <link rel="icon" href="./assets/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="icon" href="./assets/favicon/favicon-192.png" sizes="192x192" />
+    <link rel="icon" href="./assets/favicon/favicon-228.png" sizes="228x228" />
+
+    <!-- Android -->
+    <link
+      rel="shortcut icon"
+      sizes="196x196"
+      href="./assets/favicon/favicon-196.png"
+    />
+
+    <!-- iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="./assets/favicon/favicon-120.png"
+      sizes="120x120"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/favicon/favicon-152.png"
+      sizes="152x152"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/favicon/favicon-180.png"
+      sizes="180x180"
+    />
+
+    <!-- Windows 8 IE 10-->
+    <meta name="msapplication-TileColor" content="#d89d6a" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/favicon-144.png"
+    />
+
+    <!-- Windows 8.1 + IE11 and above -->
+    <meta
+      name="msapplication-config"
+      content="./assets/favicon/browserconfig.xml"
+    />
+
+    <style>
+      nav {
+        justify-content: space-between;
+        padding-left: 11%;
+        padding-right: 11%;
+      }
+
+      .toggle-btns {
+        gap: 1rem;
+      }
+
+      .container-uc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .tittle-uc {
+        text-align: center;
+      }
+
+      h1.tittle-uc {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="desktop-navbar">
+        <section class="logo">JC</section>
+
+        <section>
+          <ul class="toggle-btns">
+            <li>
+              <a onclick="lightMode()">
+                <i class="ri-sun-line" id="theme-icon-desk"></i>
+              </a>
+            </li>
+
+            <div></div>
+
+            <li>
+              <a href="index.html">
+                <i class="ri-global-line"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+
+    <section class="container-uc">
+      <h1 class="tittle-uc">Under construction</h1>
+
+      <button class="btn" onclick="location.href='./index-uc.html'">
+        Preview<span class="arrow">~></span>
+      </button>
+
+      <article class="profile-social-icons-container">
+        <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
+          <i class="ri-linkedin-fill"></i>
+        </a>
+
+        <a href="https://github.com/joaquincorradi" target="_blank">
+          <i class="ri-github-fill"></i>
+        </a>
+
+        <a href="https://instagram.com/joaquincorradi" target="_blank">
+          <i class="ri-instagram-line"></i>
+        </a>
+      </article>
+    </section>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

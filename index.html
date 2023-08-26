@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/mediaqueries.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
@@ -70,6 +69,48 @@
       name="msapplication-config"
       content="./assets/favicon/browserconfig.xml"
     />
+
+    <style>
+      nav {
+        justify-content: space-between;
+        padding-left: 11%;
+        padding-right: 11%;
+      }
+
+      .toggle-btns {
+        gap: 1rem;
+      }
+
+      .container-uc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .tittle-uc {
+        text-align: center;
+      }
+
+      h1.tittle-uc {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        margin-top: 2rem;
+      }
+
+      .profile-social-icons-container {
+        position: absolute;
+        top: 90vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -77,32 +118,14 @@
         <section class="logo">JC</section>
 
         <section>
-          <ul class="navbar-links">
-            <li>
-              <a href="#sobre">Sobre mí</a>
-            </li>
-
-            <li>
-              <a href="#tech-stack">Tech stack</a>
-            </li>
-
-            <li>
-              <a href="#proyectos">Proyectos</a>
-            </li>
-
-            <li>
-              <a href="#contacto">Contacto</a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
           <ul class="toggle-btns">
             <li>
               <a onclick="lightMode()">
-                <i class="ri-sun-line rotate-icon-desk"></i>
+                <i class="ri-sun-line" id="theme-icon-desk"></i>
               </a>
             </li>
+
+            <div></div>
 
             <li>
               <a href="index-US.html">
@@ -110,147 +133,31 @@
               </a>
             </li>
           </ul>
-        </section>
-      </nav>
-
-      <nav id="mobile-navbar">
-        <section class="logo">JC</section>
-
-        <section class="hamburger-menu">
-          <article class="hamburger-icon" onclick="toggleMenu()">
-            <i class="ri-menu-line"></i>
-          </article>
-
-          <article class="hamburger-menu-links">
-            <li>
-              <a href="#sobre" onclick="toggleMenu()">Sobre mí</a>
-            </li>
-
-            <li>
-              <a href="#tech-stack" onclick="toggleMenu()">Tech stack</a>
-            </li>
-
-            <li>
-              <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
-            </li>
-
-            <li>
-              <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-            </li>
-
-            <li>
-              <a onclick="lightMode()">
-                <i class="ri-sun-line rotate-icon"></i>
-              </a>
-            </li>
-
-            <li>
-              <a href="index-US.html">
-                <i class="ri-global-line"></i>
-              </a>
-            </li>
-
-            <li>
-              <a onclick="toggleMenu()">
-                <i class="ri-close-line"></i>
-              </a>
-            </li>
-          </article>
         </section>
       </nav>
     </header>
 
-    <section class="section" id="profile">
-      <article class="profile-pic-container">
-        <img src="./assets/img/Profile_circle.webp" alt="my profile pic" />
-      </article>
+    <section class="container-uc">
+      <h1 class="tittle-uc">Página en contrucción</h1>
 
-      <article class="profile-text-container">
-        <p class="section-p1">Hola, soy</p>
-        <h1 class="section-tittle">Joaquín Corradi</h1>
-        <p class="section-p2">Estudiante de Ingeniería en Computación</p>
-
-        <article class="btn-container">
-          <button
-            class="btn"
-            onclick="window.open('./assets/pdf/CV placeholder.pdf')"
-          >
-            Descargar CV<span class="arrow">~></span>
-          </button>
-
-          <button class="btn" onclick="location.href='./#contacto'">
-            Contacto<span class="arrow">~></span>
-          </button>
-        </article>
-
-        <article class="profile-social-icons-container">
-          <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
-            <i class="ri-linkedin-fill"></i>
-          </a>
-
-          <a href="https://github.com/joaquincorradi" target="_blank">
-            <i class="ri-github-fill"></i>
-          </a>
-
-          <a href="https://instagram.com/joaquincorradi" target="_blank">
-            <i class="ri-instagram-line"></i>
-          </a>
-        </article>
-      </article>
-
-      <article class="down-arrow-container">
-        <span class="down-arrow" onclick="location.href='./#sobre'">~></span>
-      </article>
+      <button class="btn" onclick="location.href='./index-uc.html'">
+        Preview<span class="arrow">~></span>
+      </button>
     </section>
 
-    <section class="section" id="sobre">
-      <p class="section-p1">Conoce más</p>
-      <h1 class="section-tittle">Sobre mí</h1>
+    <article class="profile-social-icons-container">
+      <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
+        <i class="ri-linkedin-fill"></i>
+      </a>
 
-      <article class="section-container">
-        <article class="profile-pic-container">
-          <img
-            src="./assets/img/Memoji.png"
-            alt="Mi Memoji"
-            class="about-pic"
-          />
-        </article>
+      <a href="https://github.com/joaquincorradi" target="_blank">
+        <i class="ri-github-fill"></i>
+      </a>
 
-        <article class="about-details-container">
-          <article class="about-containers">
-            <article class="details-container">
-              <i class="ri-home-office-line icon"></i>
-              <h3>Experiencia (no laboral)</h3>
-              <p>1+ años - C++</p>
-            </article>
-
-            <article class="details-container">
-              <i class="ri-graduation-cap-line icon"></i>
-              <h3>Educación</h3>
-              <p>Ing. en Computación</p>
-            </article>
-          </article>
-          <article class="text-container">
-            <p class="about-me-text">
-              Soy un estudiante apasionado por la informática y la ingeniería de
-              software ubicado actualmente en Argentina 🇦🇷. Siento una gran
-              afinidad por Linux <i class="fa-brands fa-fedora"></i> y las
-              tecnologías de código abierto. Creo firmemente que el futuro de la
-              tecnología radica en el software libre y de código abierto, así
-              como en el poder de la colaboración y el intercambio de
-              conocimiento. Disfruto programar y constantemente me esfuerzo por
-              aprender nuevos lenguajes.
-            </p>
-          </article>
-        </article>
-      </article>
-
-      <article class="down-arrow-container">
-        <span class="down-arrow" onclick="location.href='./#tech-stack'"
-          >~></span
-        >
-      </article>
-    </section>
+      <a href="https://instagram.com/joaquincorradi" target="_blank">
+        <i class="ri-instagram-line"></i>
+      </a>
+    </article>
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
