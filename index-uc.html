@@ -94,9 +94,9 @@
               <a href="#tech-stack">Tech stack</a>
             </li>
 
-            <li>
+            <!-- <li>
               <a href="#proyectos">Proyectos</a>
-            </li>
+            </li> -->
 
             <li>
               <a href="#contacto">Contacto</a>
@@ -138,9 +138,9 @@
               <a href="#tech-stack" onclick="toggleMenu()">Tech stack</a>
             </li>
 
-            <li>
+            <!-- <li>
               <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
-            </li>
+            </li> -->
 
             <li>
               <a href="#contacto" onclick="toggleMenu()">Contacto</a>
@@ -180,10 +180,12 @@
 
         <article class="btn-container">
           <button
-            class="btn"
+            class="btn cv-btn"
             onclick="window.open('./assets/pdf/CV placeholder.pdf')"
           >
-            Descargar CV<span class="arrow">~></span>
+            <span class="long-cv-txt">Descargar CV</span>
+            <span class="short-cv-txt">CV</span>
+            <span class="arrow">~></span>
           </button>
 
           <button class="btn" onclick="location.href='./#contacto'">
@@ -255,31 +257,22 @@
           </article>
         </article>
       </article>
-
-      <article class="down-arrow-container">
-        <!-- recordar cambiar link al publicar -->
-        <span
-          class="down-arrow"
-          onclick="location.href='index-uc.html#tech-stack'"
-          >~></span
-        >
-      </article>
     </section>
 
     <section class="section" id="tech-stack">
       <p class="section-p1">Explora mi</p>
       <h1 class="section-tittle">Tech stack</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
+      <article class="experience-details-container">
+        <article class="about-containers">
+          <article class="details-container">
             <h2 class="experience-sub-title">Lenguajes</h2>
-            <div class="article-container">
+            <article class="article-container">
               <article class="article-ts">
                 <i class="nf nf-custom-cpp icon-ts"></i>
-                <div>
+                <article>
                   <h3>C++</h3>
                   <p>Intermedio</p>
-                </div>
+                </article>
               </article>
 
               <article class="article-ts">
@@ -321,17 +314,17 @@
                   <p>Básico</p>
                 </div>
               </article>
-            </div>
-          </div>
-          <div class="details-container">
+            </article>
+          </article>
+          <article class="details-container">
             <h2 class="experience-sub-title">Herramientas</h2>
-            <div class="article-container">
+            <article class="article-container">
               <article class="article-ts">
                 <i class="nf nf-md-git icon-ts"></i>
-                <div>
+                <article>
                   <h3>Git</h3>
                   <p>Intermedio</p>
-                </div>
+                </article>
               </article>
 
               <article class="article-ts">
@@ -357,20 +350,79 @@
                   <p>Básico</p>
                 </div>
               </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <article class="down-arrow-container">
-        <!-- recordar cambiar link al publicar -->
-        <span
-          class="down-arrow"
-          onclick="location.href='index-uc.html#tech-stack'"
-          >~></span
-        >
+            </article>
+          </article>
+        </article>
       </article>
     </section>
+
+    <section class="section" id="contacto">
+      <p class="section-p1">Nos pongamos en</p>
+      <h1 class="section-tittle">Contacto</h1>
+      <div class="contact-info-upper-container">
+        <article class="btn-container">
+          <button
+            class="btn"
+            onclick="location.href='mailto:joaquinivan@proton.me'"
+          >
+            <i class="ri-mail-line"></i> E-mail<span class="arrow">~></span>
+          </button>
+
+          <button
+            class="btn"
+            onclick="window.open('https://linkedin.com/in/joaquincorradi')"
+          >
+            <span class="long-cv-txt"
+              ><i class="ri-linkedin-box-fill"></i> LinkedIn<span class="arrow"
+                >~></span
+              ></span
+            >
+
+            <span class="short-cv-txt"
+              ><i class="ri-linkedin-box-fill"></i> LI<span class="arrow"
+                >~></span
+              ></span
+            >
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <article>
+        <span class="up-arrow" onclick="location.href='#'">~></span>
+      </article>
+
+      <article class="profile-social-icons-container">
+        <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
+          <i class="ri-linkedin-fill"></i>
+        </a>
+
+        <a href="https://github.com/joaquincorradi" target="_blank">
+          <i class="ri-github-fill"></i>
+        </a>
+
+        <a href="https://instagram.com/joaquincorradi" target="_blank">
+          <i class="ri-instagram-line"></i>
+        </a>
+      </article>
+
+      <article>
+        <p>
+          Esta web es de
+          <a href="https://github.com/joaquincorradi/jcorradi"
+            >código abierto</a
+          >
+        </p>
+      </article>
+
+      <article>
+        <p>
+          Hecho con <i class="ri-heart-fill"></i> en 🇦🇷 con
+          <i class="nf nf-fa-linux"></i> y <i class="nf nf-dev-vim"></i>.
+        </p>
+      </article>
+    </footer>
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>

@@ -1,3 +1,27 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+  }
+
+  #contacto,
+  #tech-stack {
+    height: fit-content;
+  }
+
+  .short-cv-txt {
+    display: none;
+  }
+
+  .long-cv-txt {
+    display: inline;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #desktop-navbar {
     display: none;
@@ -5,5 +29,124 @@
 
   #mobile-navbar {
     display: flex;
+  }
+
+  .down-arrow-container {
+    display: none;
+  }
+
+  #tech-stack,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .section,
+  .section-container {
+    height: fit-content;
+  }
+
+  .section {
+    margin: 0 5%;
+  }
+
+  .profile-pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+
+  .short-cv-txt {
+    display: none;
+  }
+
+  .long-cv-txt {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contacto,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  .article-ts {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .btn-container {
+    gap: 0rem;
+  }
+
+  .btn {
+    width: 10rem;
+  }
+
+  .short-cv-txt {
+    display: inline;
+  }
+
+  .long-cv-txt {
+    display: none;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .profile-pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section-p2 {
+    font-size: 1.25rem;
+  }
+
+  .section-tittle {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+    hyphens: auto;
   }
 }

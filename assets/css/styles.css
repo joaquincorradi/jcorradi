@@ -5,7 +5,7 @@
 * {
   margin: 0rem;
   padding: 0rem;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   list-style: none;
   text-decoration: none;
 }
@@ -225,6 +225,14 @@ nav {
   background: none;
 }
 
+.short-cv-txt {
+  display: none;
+}
+
+.long-cv-txt {
+  display: inline;
+}
+
 @font-face {
   font-family: "JetBrains Mono";
   font-style: normal;
@@ -253,20 +261,14 @@ nav {
   color: #feffff;
 }
 
+/* Arrow indicator  */
+
 .down-arrow-container {
   position: absolute;
   top: 85vh;
   right: 50%;
   left: auto;
   cursor: pointer;
-}
-
-.down-arrow {
-  display: block;
-  font-family: JetBrains Mono;
-  font-size: 1.7rem;
-  color: #d89d6a;
-  animation: moveUpDown 1s ease-in-out infinite;
 }
 
 @keyframes moveUpDown {
@@ -278,6 +280,14 @@ nav {
   50% {
     transform: translateY(0) rotate(90deg);
   }
+}
+
+.down-arrow {
+  display: block;
+  font-family: JetBrains Mono;
+  font-size: 1.7rem;
+  color: #d89d6a;
+  animation: moveUpDown 1s ease-in-out infinite;
 }
 
 /* About section config */
@@ -390,4 +400,52 @@ nav {
 
 .tex {
   font-size: 1rem !important;
+}
+
+/* Contacto */
+
+#contacto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+/* Footer config */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  height: 26vh;
+}
+
+@keyframes moveDownUp {
+  0%,
+  100% {
+    transform: translateY(10px) rotate(-90deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(-90deg);
+  }
+}
+
+.up-arrow {
+  margin-bottom: 2rem;
+  cursor: pointer;
+  display: block;
+  font-family: JetBrains Mono;
+  font-size: 1.7rem;
+  color: #d89d6a;
+  animation: moveDownUp 1s ease-in-out infinite;
 }
