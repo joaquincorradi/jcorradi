@@ -31,10 +31,6 @@
     display: flex;
   }
 
-  .down-arrow-container {
-    display: none;
-  }
-
   #tech-stack,
   .experience-details-container {
     margin-top: 2rem;
@@ -74,6 +70,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  nav {
+    justify-content: space-between;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
   #contacto,
   footer {
     height: 40vh;
@@ -90,6 +92,7 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
@@ -138,7 +141,7 @@
   }
 
   .section-p2 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .section-tittle {

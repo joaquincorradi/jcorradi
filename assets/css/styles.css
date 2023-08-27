@@ -5,7 +5,7 @@
 * {
   margin: 0rem;
   padding: 0rem;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
@@ -266,9 +266,9 @@ nav {
 .down-arrow-container {
   position: absolute;
   top: 85vh;
-  right: 50%;
-  left: auto;
   cursor: pointer;
+  left: 50%; /* Agregamos esta línea para centrar horizontalmente */
+  transform: translateX(-50%);
 }
 
 @keyframes moveUpDown {
