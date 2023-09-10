@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
 
     <!-- Favicon -->
     <!-- generics -->
@@ -126,7 +130,7 @@
 
         <section class="hamburger-menu">
           <article class="hamburger-icon" onclick="toggleMenu()">
-            <i class="ri-menu-line"></i>
+            <span id="md-icon" class="material-symbols-outlined"> menu </span>
           </article>
 
           <article class="hamburger-menu-links">
@@ -137,10 +141,6 @@
             <li>
               <a href="#tech-stack" onclick="toggleMenu()">Tech stack</a>
             </li>
-
-            <!-- <li>
-              <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
-            </li> -->
 
             <li>
               <a href="#contacto" onclick="toggleMenu()">Contacto</a>
@@ -402,7 +402,41 @@
         <a href="https://instagram.com/joaquincorradi" target="_blank">
           <i class="ri-instagram-line"></i>
         </a>
+
+        <a href="#" class="shareBntContainer">
+          <span class="material-symbols-outlined" id="botonCompartir">
+            share
+          </span>
+        </a>
       </article>
+
+      <script>
+        // JavaScript para manejar la acción de compartir
+        document
+          .getElementById("botonCompartir")
+          .addEventListener("click", function () {
+            // URL de la página que deseas compartir
+            var url = window.location.href;
+
+            // Usar la API de Web Share para compartir la URL
+            if (navigator.share) {
+              navigator
+                .share({
+                  title: "Mi Página Web",
+                  url: url,
+                })
+                .then(function () {
+                  console.log("Enlace compartido con éxito.");
+                })
+                .catch(function (error) {
+                  console.error("Error al compartir el enlace:", error);
+                });
+            } else {
+              // Fallback para navegadores que no admiten la API de Web Share
+              alert("Tu navegador no admite la función de compartir.");
+            }
+          });
+      </script>
 
       <article>
         <p>

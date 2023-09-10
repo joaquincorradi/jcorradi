@@ -108,7 +108,8 @@ nav {
   display: inline-block;
 }
 
-.hamburger-icon {
+.hamburger-icon,
+#md-icon {
   cursor: pointer;
   font-size: 2rem;
 }
@@ -427,6 +428,10 @@ footer {
   align-items: center;
   font-family: "Noto Sans", sans-serif;
   height: 26vh;
+}
+
+.shareBntContainer {
+  display: none;
 }
 
 @keyframes moveDownUp {

@@ -80,6 +80,11 @@
   footer {
     height: 40vh;
   }
+
+  .shareBntContainer {
+    display: inline-block;
+  }
+
   #profile {
     height: 83vh;
     margin-bottom: 0;
