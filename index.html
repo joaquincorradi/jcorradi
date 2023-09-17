@@ -12,6 +12,13 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/mediaqueries.css" />
 
@@ -75,385 +82,107 @@
       content="./assets/favicon/browserconfig.xml"
     />
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script
-      type="text/javascript"
-      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
-    <header>
-      <nav id="desktop-navbar">
-        <section class="logo">JC</section>
+    <header class="desktop-header"></header>
 
-        <section>
-          <ul class="navbar-links">
-            <li>
-              <a href="#sobre">Sobre mí</a>
-            </li>
+    <nav class="nav-rail">
+      <a href="#inicio">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> home </span>
+        </span>
+        <span class="nav-rail__label">Inicio</span>
+      </a>
 
-            <li>
-              <a href="#tech-stack">Tech stack</a>
-            </li>
+      <a href="#sobre">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> person </span>
+        </span>
+        <span class="nav-rail__label">Sobre mí</span>
+      </a>
 
-            <!-- <li>
-              <a href="#proyectos">Proyectos</a>
-            </li> -->
+      <a href="#tech-stack">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> code </span>
+        </span>
+        <span class="nav-rail__label">Teck Stack</span>
+      </a>
 
-            <li>
-              <a href="#contacto">Contacto</a>
-            </li>
-          </ul>
-        </section>
+      <a href="#contacto">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> alternate_email </span>
+        </span>
+        <span class="nav-rail__label">Contacto</span>
+      </a>
 
-        <section>
-          <ul class="toggle-btns">
-            <li>
-              <a onclick="lightMode()">
-                <i class="ri-sun-line" id="theme-icon-desk"></i>
-              </a>
-            </li>
+      <article class="nav-rail__toggle-btns">
+        <button>
+          <span class="material-symbols-outlined"> language </span>
+        </button>
+        <button onclick="lightMode()">
+          <span class="material-symbols-outlined"> light_mode </span>
+        </button>
+      </article>
+    </nav>
 
-            <li>
-              <a href="index-US.html">
-                <i class="ri-global-line"></i>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-
-      <nav id="mobile-navbar">
-        <section class="logo">JC</section>
-
-        <section class="hamburger-menu">
-          <article class="hamburger-icon" onclick="toggleMenu()">
-            <span id="md-icon" class="material-symbols-outlined"> menu </span>
-          </article>
-
-          <article class="hamburger-menu-links">
-            <li>
-              <a href="#sobre" onclick="toggleMenu()">Sobre mí</a>
-            </li>
-
-            <li>
-              <a href="#tech-stack" onclick="toggleMenu()">Tech stack</a>
-            </li>
-
-            <li>
-              <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-            </li>
-
-            <li>
-              <a onclick="lightMode()">
-                <i class="ri-sun-line rotate-icon"></i>
-              </a>
-            </li>
-
-            <li>
-              <a href="index-US.html">
-                <i class="ri-global-line"></i>
-              </a>
-            </li>
-
-            <li>
-              <a onclick="toggleMenu()">
-                <i class="ri-close-line"></i>
-              </a>
-            </li>
-          </article>
-        </section>
-      </nav>
+    <header class="mobile-header">
+      <h1 class="mobile-header__logo logo">JC</h1>
+      <article class="mobile-header__toggle-btns">
+        <button onclick="lightMode()">
+          <span id="mobile-header__icon" class="material-symbols-outlined">
+            light_mode
+          </span>
+        </button>
+        <button>
+          <span id="mobile-header__icon" class="material-symbols-outlined">
+            language
+          </span>
+        </button>
+      </article>
     </header>
 
-    <section class="section" id="profile">
-      <article class="profile-pic-container">
-        <img src="./assets/img/Profile_circle.webp" alt="my profile pic" />
-      </article>
+    <nav class="mobile-nav-rail">
+      <a href="#inicio">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> home </span>
+        </span>
+        <span class="nav-rail__label">Inicio</span>
+      </a>
 
-      <article class="profile-text-container">
-        <p class="section-p1">Hola, soy</p>
-        <h1 class="section-tittle">Joaquín Corradi</h1>
-        <p class="section-p2">Estudiante de Ingeniería en Computación</p>
+      <a href="#sobre">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> person </span>
+        </span>
+        <span class="nav-rail__label">Sobre mí</span>
+      </a>
 
-        <article class="btn-container">
-          <button
-            class="btn cv-btn"
-            onclick="window.open('./assets/pdf/CV.pdf')"
-          >
-            <span class="long-cv-txt">Descargar CV</span>
-            <span class="short-cv-txt">CV</span>
-            <span class="arrow">~></span>
-          </button>
+      <a href="#tech-stack">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> code </span>
+        </span>
+        <span class="nav-rail__label">Teck Stack</span>
+      </a>
 
-          <button class="btn" onclick="location.href='./#contacto'">
-            Contacto<span class="arrow">~></span>
-          </button>
-        </article>
+      <a href="#contacto">
+        <span class="nav-rail__icon">
+          <span class="material-symbols-outlined"> alternate_email </span>
+        </span>
+        <span class="nav-rail__label">Contacto</span>
+      </a>
+    </nav>
 
-        <article class="profile-social-icons-container">
-          <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
-            <i class="ri-linkedin-fill"></i>
-          </a>
+    <section id="inicio" class="section"></section>
 
-          <a href="https://github.com/joaquincorradi" target="_blank">
-            <i class="ri-github-fill"></i>
-          </a>
+    <section id="sobre" class="section"></section>
 
-          <a href="https://instagram.com/joaquincorradi" target="_blank">
-            <i class="ri-instagram-line"></i>
-          </a>
-        </article>
-      </article>
+    <section id="tech-stack" class="section"></section>
 
-      <article class="down-arrow-container">
-        <span class="down-arrow" onclick="location.href='#sobre'">~></span>
-      </article>
-    </section>
+    <section id="contacto" class="section"></section>
 
-    <section class="section" id="sobre">
-      <p class="section-p1">Conoce más</p>
-      <h1 class="section-tittle">Sobre mí</h1>
-
-      <article class="section-container">
-        <article class="profile-pic-container">
-          <img
-            src="./assets/img/Memoji.png"
-            alt="Mi Memoji"
-            class="about-pic"
-          />
-        </article>
-
-        <article class="about-details-container">
-          <article class="about-containers">
-            <article class="details-container">
-              <i class="ri-home-office-line icon"></i>
-              <h3>Experiencia (no laboral)</h3>
-              <p>1+ años - C++</p>
-            </article>
-
-            <article class="details-container">
-              <i class="ri-graduation-cap-line icon"></i>
-              <h3>Educación</h3>
-              <p>Ing. en Computación</p>
-            </article>
-          </article>
-          <article class="text-container">
-            <p class="about-me-text">
-              Soy un estudiante apasionado por la informática y la ingeniería de
-              software ubicado actualmente en Argentina 🇦🇷. Siento una gran
-              afinidad por Linux <i class="fa-brands fa-fedora"></i> y las
-              tecnologías de código abierto. Creo firmemente que el futuro de la
-              tecnología radica en el software libre y de código abierto, así
-              como en el poder de la colaboración y el intercambio de
-              conocimiento. Disfruto programar y constantemente me esfuerzo por
-              aprender nuevos lenguajes.
-            </p>
-          </article>
-        </article>
-      </article>
-    </section>
-
-    <section class="section" id="tech-stack">
-      <p class="section-p1">Explora mi</p>
-      <h1 class="section-tittle">Tech stack</h1>
-      <article class="experience-details-container">
-        <article class="about-containers">
-          <article class="details-container">
-            <h2 class="experience-sub-title">Lenguajes</h2>
-            <article class="article-container">
-              <article class="article-ts">
-                <i class="nf nf-custom-cpp icon-ts"></i>
-                <article>
-                  <h3>C++</h3>
-                  <p>Intermedio</p>
-                </article>
-              </article>
-
-              <article class="article-ts">
-                <i class="ri-html5-fill icon-ts"></i>
-                <div>
-                  <h3>HTML</h3>
-                  <p>Avanzado</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <i class="ri-css3-fill icon-ts"></i>
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermedio</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <i class="ri-javascript-fill icon-ts"></i>
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Básico</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <span class="icon-ts tex">$\LaTeX$</span>
-                <div>
-                  <h3>LaTeX</h3>
-                  <p>Intermedio</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <i class="fa-brands fa-rust icon-ts"></i>
-                <div>
-                  <h3>Rust</h3>
-                  <p>Básico</p>
-                </div>
-              </article>
-            </article>
-          </article>
-          <article class="details-container">
-            <h2 class="experience-sub-title">Herramientas</h2>
-            <article class="article-container">
-              <article class="article-ts">
-                <i class="nf nf-md-git icon-ts"></i>
-                <article>
-                  <h3>Git</h3>
-                  <p>Intermedio</p>
-                </article>
-              </article>
-
-              <article class="article-ts">
-                <i class="nf nf-fa-linux icon-ts"></i>
-                <div>
-                  <h3>Linux</h3>
-                  <p>Intermedio</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <i class="nf nf-dev-vim icon-ts"></i>
-                <div>
-                  <h3>Vim</h3>
-                  <p>Intermedio</p>
-                </div>
-              </article>
-
-              <article class="article-ts">
-                <i class="nf nf-cod-terminal_bash icon-ts"></i>
-                <div>
-                  <h3>Bash</h3>
-                  <p>Básico</p>
-                </div>
-              </article>
-            </article>
-          </article>
-        </article>
-      </article>
-    </section>
-
-    <section class="section" id="contacto">
-      <p class="section-p1">Nos pongamos en</p>
-      <h1 class="section-tittle">Contacto</h1>
-      <div class="contact-info-upper-container">
-        <article class="btn-container">
-          <button
-            class="btn"
-            onclick="location.href='mailto:joaquinivan@proton.me'"
-          >
-            <i class="ri-mail-line"></i> E-mail<span class="arrow">~></span>
-          </button>
-
-          <button
-            class="btn"
-            onclick="window.open('https://linkedin.com/in/joaquincorradi')"
-          >
-            <span class="long-cv-txt"
-              ><i class="ri-linkedin-box-fill"></i> LinkedIn<span class="arrow"
-                >~></span
-              ></span
-            >
-
-            <span class="short-cv-txt"
-              ><i class="ri-linkedin-box-fill"></i> LI<span class="arrow"
-                >~></span
-              ></span
-            >
-          </button>
-        </article>
-      </div>
-    </section>
-
-    <footer>
-      <article>
-        <span class="up-arrow" onclick="location.href='#'">~></span>
-      </article>
-
-      <article class="profile-social-icons-container">
-        <a href="https://linkedin.com/in/joaquincorradi" target="_blank">
-          <i class="ri-linkedin-fill"></i>
-        </a>
-
-        <a href="https://github.com/joaquincorradi" target="_blank">
-          <i class="ri-github-fill"></i>
-        </a>
-
-        <a href="https://instagram.com/joaquincorradi" target="_blank">
-          <i class="ri-instagram-line"></i>
-        </a>
-
-        <a class="shareBntContainer">
-          <span class="material-symbols-outlined" id="botonCompartir">
-            share
-          </span>
-        </a>
-      </article>
-
-      <script>
-        // JavaScript para manejar la acción de compartir
-        document
-          .getElementById("botonCompartir")
-          .addEventListener("click", function () {
-            // URL de la página que deseas compartir
-            var url = window.location.href;
-
-            // Usar la API de Web Share para compartir la URL
-            if (navigator.share) {
-              navigator
-                .share({
-                  title: "Joaquín Corradi - Web Personal",
-                  url: url,
-                })
-                .then(function () {
-                  console.log("Enlace compartido con éxito.");
-                })
-                .catch(function (error) {
-                  console.error("Error al compartir el enlace:", error);
-                });
-            } else {
-              // Fallback para navegadores que no admiten la API de Web Share
-              alert("Tu navegador no admite la función de compartir.");
-            }
-          });
-      </script>
-
-      <article>
-        <p>
-          Esta web es de
-          <a href="https://github.com/joaquincorradi/jcorradi"
-            >código abierto</a
-          >
-        </p>
-      </article>
-
-      <article>
-        <p>
-          Hecho con <i class="ri-heart-fill"></i> en 🇦🇷 con
-          <i class="nf nf-fa-linux"></i> y <i class="nf nf-dev-vim"></i>.
-        </p>
-      </article>
-    </footer>
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
