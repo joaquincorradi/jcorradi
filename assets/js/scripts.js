@@ -18,15 +18,18 @@ function lightMode() {
 function updateActiveLink() {
   const sections = document.querySelectorAll(".section");
   const navIcons = document.querySelectorAll(".nav-rail__icon");
+  const mdIcons = document.querySelectorAll(".material-symbols-outlined");
 
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();
     if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
       // La sección está visible en la ventana
       navIcons[index].classList.add("active-icon");
+      mdIcons[index].classList.add("active-icon");
     } else {
       // La sección no está visible en la ventana
       navIcons[index].classList.remove("active-icon");
+      mdIcons[index].classList.remove("active-icon");
     }
   });
 }
