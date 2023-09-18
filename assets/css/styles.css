@@ -51,11 +51,15 @@ button {
 
 .light-mode .nav-rail,
 .light-mode .mobile-nav-rail {
-  background-color: #f2f6fa;
+  background-color: #ffffff;
 }
 
 .light-mode .nav-rail__icon:hover {
   background-color: #c7cacf;
+}
+
+.light-mode .section__container {
+  background-color: #f2f6fa;
 }
 
 /* Desktop header */
@@ -368,6 +372,12 @@ button {
 
 #sobre div.section__container {
   display: block;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+#sobre h1.section-tittle {
+  margin-bottom: 3rem;
 }
 
 .about-containers {
@@ -420,10 +430,12 @@ button {
 
 .about-pic {
   animation: float 6s ease-in-out infinite;
+  height: 20rem;
+  width: 20rem;
 }
 
-.icon {
-  font-size: 1.6rem;
+#sobre .material-symbols-outlined {
+  font-size: 1.6rem !important;
 }
 
 .about-me-text {
