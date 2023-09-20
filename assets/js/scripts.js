@@ -1,41 +1,102 @@
 function lightMode() {
   var body = document.body;
   body.classList.toggle("light-mode");
-
-  // var icon = document.getElementById("theme-icon-desk");
-  // if (body.classList.contains("light-mode")) {
-  //   icon.classList.remove("ri-sun-line");
-  //   icon.classList.add("ri-moon-fill");
-  //   localStorage.setItem("theme", "light");
-  // } else {
-  //   icon.classList.remove("ri-moon-fill");
-  //   icon.classList.add("ri-sun-line");
-  //   localStorage.setItem("theme", "dark");
-  // }
 }
 
-// Función para actualizar el color de fondo del enlace activo en la barra lateral
-function updateActiveLink() {
-  const sections = document.querySelectorAll(".section");
-  const navIcons = document.querySelectorAll(".nav-rail__icon");
-  const mdIcons = document.querySelectorAll(".material-symbols-outlined");
+function copyToClipboard(text) {
+  var input = document.createElement("input");
+  input.setAttribute("value", text);
+  document.body.appendChild(input);
 
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      // La sección está visible en la ventana
-      navIcons[index].classList.add("active-icon");
-      mdIcons[index].classList.add("active-icon");
-    } else {
-      // La sección no está visible en la ventana
-      navIcons[index].classList.remove("active-icon");
-      mdIcons[index].classList.remove("active-icon");
-    }
-  });
+  input.select();
+
+  var success = document.execCommand("copy");
+
+  document.body.removeChild(input);
+
+  if (success) {
+    console.log("Texto copiado al portapapeles: " + text);
+    showCopySuccessMessage();
+  } else {
+    console.error("Error al copiar al portapapeles");
+  }
 }
 
-// Escuchar el evento de desplazamiento (scroll) para actualizar el enlace activo
-window.addEventListener("scroll", updateActiveLink);
+function showCopySuccessMessage() {
+  var copySuccessMessage = document.getElementById("pop-up");
+  copySuccessMessage.style.display = "flex";
 
-// Llamar a la función al cargar la página para establecer el estado inicial
-updateActiveLink();
+  setTimeout(function () {
+    copySuccessMessage.style.display = "none";
+  }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-rail a"); // Obtén todos los enlaces en la barra lateral
+  const sections = document.querySelectorAll("section"); // Obtén todas las secciones de la página
+  const iconSpans = document.querySelectorAll(
+    ".nav-rail .material-symbols-outlined"
+  ); // Obtén todos los iconos
+
+  // Función para cambiar el color de fondo y la clase del icono del enlace activo
+  function setActiveLink() {
+    const currentScroll = window.scrollY;
+
+    sections.forEach((section, index) => {
+      const top = section.offsetTop - 100; // Ajusta este valor según sea necesario
+      const bottom = section.offsetTop + section.offsetHeight; // Ajusta este valor según sea necesario
+
+      if (currentScroll >= top && currentScroll <= bottom) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active"); // Elimina la clase "active" de todos los enlaces
+        });
+
+        iconSpans.forEach((iconSpan) => {
+          iconSpan.classList.remove("active-icon"); // Elimina la clase "active-icon" de todos los iconos
+        });
+
+        navLinks[index].classList.add("active"); // Agrega la clase "active" al enlace correspondiente
+        iconSpans[index].classList.add("active-icon"); // Agrega la clase "active-icon" al icono correspondiente
+      }
+    });
+  }
+
+  // Llama a la función cuando se carga la página y cuando se desplaza
+  window.addEventListener("load", setActiveLink);
+  window.addEventListener("scroll", setActiveLink);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".mobile-nav-rail a"); // Obtén todos los enlaces en la barra lateral
+  const sections = document.querySelectorAll("section"); // Obtén todas las secciones de la página
+  const iconSpans = document.querySelectorAll(
+    ".nav-rail .material-symbols-outlined"
+  ); // Obtén todos los iconos
+
+  // Función para cambiar el color de fondo y la clase del icono del enlace activo
+  function setActiveLink() {
+    const currentScroll = window.scrollY;
+
+    sections.forEach((section, index) => {
+      const top = section.offsetTop - 100; // Ajusta este valor según sea necesario
+      const bottom = section.offsetTop + section.offsetHeight; // Ajusta este valor según sea necesario
+
+      if (currentScroll >= top && currentScroll <= bottom) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active"); // Elimina la clase "active" de todos los enlaces
+        });
+
+        iconSpans.forEach((iconSpan) => {
+          iconSpan.classList.remove("active-icon"); // Elimina la clase "active-icon" de todos los iconos
+        });
+
+        navLinks[index].classList.add("active"); // Agrega la clase "active" al enlace correspondiente
+        iconSpans[index].classList.add("active-icon"); // Agrega la clase "active-icon" al icono correspondiente
+      }
+    });
+  }
+
+  // Llama a la función cuando se carga la página y cuando se desplaza
+  window.addEventListener("load", setActiveLink);
+  window.addEventListener("scroll", setActiveLink);
+});
