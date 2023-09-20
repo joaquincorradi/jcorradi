@@ -43,7 +43,7 @@ button {
 
 .light-mode {
   color: #3c4043;
-  background-color: #ffffff;
+  background-color: #f2f6fa;
 }
 
 .light-mode a {
@@ -52,7 +52,7 @@ button {
 
 .light-mode .nav-rail,
 .light-mode .mobile-nav-rail {
-  background-color: #ffffff;
+  background-color: #f2f6fa;
 }
 
 .light-mode .nav-rail__icon:hover,
@@ -63,17 +63,21 @@ button {
 }
 
 .light-mode .section__container {
-  background-color: #f2f6fa;
+  background-color: #ffffff;
 }
 
 .light-mode .nav-rail a.active .nav-rail__icon,
-.light-mode .mobile-nav-rail a.active .nav-rail__icon,
-.light-mode .tonal-btn {
+.light-mode .mobile-nav-rail a.active .nav-rail__icon {
   background-color: #a3d5dd;
 }
 
+.light-mode .tonal-btn {
+  background-color: #e8f0fe;
+  color: #174ea6;
+}
+
 .light-mode .tonal-btn:hover {
-  background-color: #a0c9d0;
+  background-color: #f2f6fa;
 }
 
 .light-mode .details-container {
@@ -82,27 +86,6 @@ button {
 
 .light-mode #pop-up {
   background-color: #f2f6fa;
-}
-
-/* Desktop header */
-
-.desktop-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 15rem;
-  padding-right: 15rem;
-  padding-top: 2%;
-  padding-bottom: 3%;
-}
-
-.desktop-header__version-toggle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.3rem;
 }
 
 /* Desktop navbar */
@@ -128,20 +111,22 @@ button {
 }
 
 .nav-rail__icon {
-  margin: 0.35rem 0 0.35rem;
+  margin: 0.35rem 0 0.25rem;
   width: 3.4rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   border-radius: 6.25rem;
   transition: all 0.2s ease;
 }
 
 .nav-rail__icon:hover {
   background-color: #454446;
-  transform: scale(1.08);
+}
+.nav-rail__icon:hover .material-symbols-outlined {
+  transform: scale(1.05);
 }
 
 .nav-rail a.active .nav-rail__icon {
@@ -314,11 +299,13 @@ button {
 }
 
 .tonal-btn {
-  background-color: #4b727b;
+  background-color: rgba(138, 180, 248, 0.24);
+  color: #8ab4f8;
 }
 
 .tonal-btn:hover {
-  background-color: #577075;
+  background-color: #212025;
+  color: inherit;
 }
 
 .text-btn:hover {

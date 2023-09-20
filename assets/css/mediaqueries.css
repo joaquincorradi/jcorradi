@@ -228,6 +228,10 @@
     justify-content: center;
   }
 
+  #sobre .profile-pic-container {
+    margin-bottom: 4rem;
+  }
+
   .section-p2 {
     font-size: 1.15rem;
   }
@@ -242,10 +246,14 @@
   }
 
   .light-mode {
-    background-color: #f2f6fa;
+    background-color: #ffffff;
   }
 
   .light-mode .section__container {
     background-color: transparent;
+  }
+
+  .light-mode .mobile-nav-rail {
+    background-color: #f2f6fa;
   }
 }
