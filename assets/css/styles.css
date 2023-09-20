@@ -144,10 +144,6 @@ button {
   transform: scale(1.08);
 }
 
-/* .nav-rail__icon.active-icon {
-  background-color: #4b727b;
-} */
-
 .nav-rail a.active .nav-rail__icon {
   background-color: #4b727b;
 }

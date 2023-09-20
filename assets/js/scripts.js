@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".mobile-nav-rail a"); // Obtén todos los enlaces en la barra lateral
   const sections = document.querySelectorAll("section"); // Obtén todas las secciones de la página
   const iconSpans = document.querySelectorAll(
-    ".nav-rail .material-symbols-outlined"
+    ".mobile-nav-rail .material-symbols-outlined"
   ); // Obtén todos los iconos
 
   // Función para cambiar el color de fondo y la clase del icono del enlace activo
