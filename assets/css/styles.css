@@ -57,7 +57,8 @@ button {
 
 .light-mode .nav-rail__icon:hover,
 .light-mode .text-btn:hover,
-.light-mode .nav-rail__toggle-btns button:hover {
+.light-mode .nav-rail__toggle-btns button:hover,
+.light-mode .mobile-header__toggle-btns button:hover {
   background-color: #c7cacf;
 }
 
@@ -66,6 +67,7 @@ button {
 }
 
 .light-mode .nav-rail a.active .nav-rail__icon,
+.light-mode .mobile-nav-rail a.active .nav-rail__icon,
 .light-mode .tonal-btn {
   background-color: #a3d5dd;
 }
@@ -76,6 +78,10 @@ button {
 
 .light-mode .details-container {
   background-color: #e0e9f5;
+}
+
+.light-mode #pop-up {
+  background-color: #f2f6fa;
 }
 
 /* Desktop header */

@@ -142,6 +142,7 @@
   }
 
   .about-pic {
+    animation: none;
     height: 12rem;
     width: 12rem;
   }
@@ -181,7 +182,7 @@
 
   footer {
     height: fit-content;
-    margin-bottom: 7.5rem;
+    margin-bottom: 10rem;
   }
 
   .footer__block {

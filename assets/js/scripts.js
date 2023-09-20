@@ -1,6 +1,17 @@
 function lightMode() {
   var body = document.body;
+  var iconSpan = document.querySelector("#theme-icon-desk");
+  var iconSpanM = document.querySelector(".theme-icon-mobile");
+
   body.classList.toggle("light-mode");
+
+  if (body.classList.contains("light-mode")) {
+    iconSpan.textContent = "dark_mode";
+    iconSpanM.textContent = "dark_mode";
+  } else {
+    iconSpan.textContent = "light_mode";
+    iconSpanM.textContent = "light_mode";
+  }
 }
 
 function copyToClipboard(text) {
