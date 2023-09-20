@@ -56,7 +56,6 @@ button {
 }
 
 .light-mode .nav-rail__icon:hover,
-.light-mode .text-btn:hover,
 .light-mode .nav-rail__toggle-btns button:hover,
 .light-mode .mobile-header__toggle-btns button:hover {
   background-color: #c7cacf;
@@ -77,6 +76,11 @@ button {
 }
 
 .light-mode .tonal-btn:hover {
+  background-color: #f2f6fa;
+  color: #174ea6;
+}
+
+.light-mode .text-btn:hover {
   background-color: #f2f6fa;
 }
 
@@ -304,12 +308,12 @@ button {
 }
 
 .tonal-btn:hover {
-  background-color: #212025;
+  background-color: rgba(60, 65, 73, 0.24);
   color: inherit;
 }
 
 .text-btn:hover {
-  background-color: #454446;
+  background-color: rgba(60, 65, 73, 0.24);
 }
 
 /* Arrows config */
@@ -588,7 +592,16 @@ footer {
   gap: 0.5rem;
 }
 
+.link-hover-decoration {
+  transition: all 0.3s ease;
+}
+
+.link-hover-decoration:hover {
+  border-bottom: 1px solid;
+}
+
 #copyButton {
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
