@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://jcorradi.xyz/sitemap.xml
+Sitemap: https://www.jcorradi.xyz/sitemap.xml
