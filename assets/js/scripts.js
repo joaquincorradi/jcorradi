@@ -1,3 +1,4 @@
+// Change theme
 function lightMode() {
   var body = document.body;
   var iconSpan = document.querySelector("#theme-icon-desk");
@@ -14,6 +15,7 @@ function lightMode() {
   }
 }
 
+// Copy to clipboard
 function copyToClipboard(text) {
   var input = document.createElement("input");
   input.setAttribute("value", text);
@@ -42,6 +44,7 @@ function showCopySuccessMessage() {
   }, 3000);
 }
 
+// Change navbar link color (desktop)
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-rail a"); // Obtén todos los enlaces en la barra lateral
   const sections = document.querySelectorAll("section"); // Obtén todas las secciones de la página
@@ -70,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
         iconSpans[index].classList.add("active-icon"); // Agrega la clase "active-icon" al icono correspondiente
       }
     });
+
+    // Llama a la función nuevamente cuando la página se carga para asegurarte de que se aplique el color al enlace de inicio
+    window.addEventListener("load", function () {
+      setActiveLink();
+    });
   }
 
   // Llama a la función cuando se carga la página y cuando se desplaza
@@ -77,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", setActiveLink);
 });
 
+// Change navbar link color (mobile)
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".mobile-nav-rail a"); // Obtén todos los enlaces en la barra lateral
   const sections = document.querySelectorAll("section"); // Obtén todas las secciones de la página
@@ -104,6 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks[index].classList.add("active"); // Agrega la clase "active" al enlace correspondiente
         iconSpans[index].classList.add("active-icon"); // Agrega la clase "active-icon" al icono correspondiente
       }
+    });
+
+    // Llama a la función nuevamente cuando la página se carga para asegurarte de que se aplique el color al enlace de inicio
+    window.addEventListener("load", function () {
+      setActiveLink();
     });
   }
 
